@@ -15,3 +15,5 @@
 //= require jquery_ujs
 //= require jquery.stellar
 //= require portfolioHome
+//= require underscore
+//= require gmaps/google
