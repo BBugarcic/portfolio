@@ -22,7 +22,7 @@ function initMap() {
 
     var handler = Gmaps.build('Google');
     handler.buildMap({
-        internal: {id: 'custom_style'},
+        internal: {id: 'map'},
         provider: {
           zoom:      15,
           center:    new google.maps.LatLng(52.5520332, 13.439426),
