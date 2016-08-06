@@ -173,17 +173,6 @@ $(document).on("ready page:change", function(){
 		$(".message-box").css("background-color", "#dddddd");
 	});
 
-	// char counter
-	$(".message-box").on("keyup", function() {
-		var charCount = $(".message-box").val().length;
-		$("#char-count").html(charCount);
-		if(charCount > 50) {
-			$("#char-count").css("color","red");
-		} else {
-			$("#char-count").css("color","#6b6b6b");
-		}
-	});
-
 	// submit
 	$("#submitBtn").on("click", function() {
 		// get input
