@@ -35,6 +35,8 @@
             "lng": 13.439426
           }
         ]);
+        handler.bounds.extendWith(marker);
+        handler.fitMapToBounds();
       }
     );
   };
