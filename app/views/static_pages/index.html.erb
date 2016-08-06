@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2B Branislav Bugarcic</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => false, 'data-turbolinks-eval' => false %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar">
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+
+  <!--navbar starts here-->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">2B</a>
+      </div><!-- end navbar-header -->
+      <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">mywork</a></li>
+          <li><a href="#faq">faq</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div><!-- end collapse navbar-collapse -->
+    </div><!-- end container-fluid -->
+  </nav> <!-- end navbar-->
+
+  <main class="container-fluid">
+    <section class="parallax parallax-0" data-stellar-background-ratio="0.5" id="home">
+          <div class="home-text" data-stellar-ratio="2">
+            <h3>Branislav Bugarcic</h3>
+            <h5>Web Developer</h5>
+          </div>
+    </section>
+
+    <div class="container-fluid">
+  <section id="about">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 introduction">
+        <h2>About Me</h2>
+        <p>My name is Branislav Bugarcic. I am a Web Developer based in <a href="#home" title="tooltip exercise" id="#item1">Berlin</a> in Germany.</p>
+        <p>I build things for Desktop and Mobile using modern technologies.</p>
+        <a class="btn btn-default btn-lg" data-toggle="tooltip" data-placement="bottom" title="Discover more about me and see my CV" href="about.html">more</a>
+      </div>
+      <div class="col-sm-12 col-md-6 skills" id="skills">
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="devicon-javascript-plain skill-item pull-right"></i>
+              </div>
+              <div class="col-xs-6">
+                <i class="devicon-jquery-plain-wordmark skill-item pull-left"></i>
+              </div>
+            </div>
+          </div>
+        </div><!-- end row -->
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="devicon-html5-plain-wordmark skill-item pull-right"></i>
+              </div>
+              <div class="col-xs-6">
+                <i class="devicon-css3-plain-wordmark skill-item pull-left"></i>
+              </div>
+            </div>
+          </div>
+        </div><!-- end row -->
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="devicon-php-plain  skill-item pull-right"></i>
+              </div>
+              <div class="col-xs-6">
+                <i class="devicon-c-plain skill-item pull-left"></i>
+              </div>
+            </div>
+          </div>
+        </div><!-- end row -->
+
+      </div><!-- end #skills -->
+    </div><!-- end row -->
+  </section>
+
+  <section class="parallax parallax-1">
+      <div class="animated invisible">
+        <h1>Move to higher level</h1>
+      </div>
+  </section>
+
+  <section id="work">
+      <h2>My Work</h2>
+      <div class="row work-wrapper">
+      </div><!-- end row work-wrapper -->
+      <div class="row exercise-wrapper">
+      </div>
+  </section>
+
+  <section class="parallax parallax-2">
+    <div class="animated invisible">
+      <h1>Strong</h1> <h1>Modern</h1> <h1>Relaible</h1>
+    </div>
+  </section>
+
+  <section id="faq">
+      <h2>faq</h2>
+        <div class="panel-wrapper">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a id="panel-title-1" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Why did you decide to become a web developer?
+                  </a>
+                </h4>
+              </div><!-- end panel-heading -->
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                      It is always a pleasure to answer this question.
+                      <br>I made a career change from field of literature and philology to web development.
+                      You can read more about my story <a href="#">here</a>.
+                      <br>For me, web development is the way to personally become a part of ongoing worldwide change
+                      that is driven by modern technologies.
+                      <br>In web development I found a space to combine different skills and knowledge,
+                      a way to express my personality,
+                      and a chance to team up with great people
+                      ready to push boundaries and accept new challanges.
+                </div>
+              </div><!-- end colapseOne -->
+            </div><!-- end panel-default -->
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" id="panel-title-2" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      What is your design process?
+                  </a>
+                </h4>
+              </div><!-- end panel-heading -->
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                      I found a communication to be the main ingredient of every good web design process.
+                      Exchange of information and ideas with client is my high priority.
+                      <br>In general, I divide my design process in six steps: gathering information, planning, design, development,
+                      testing and deployment, maintenance.
+                      <br>If you need more information, send me an email, and I would gladly give you a more detailed description.
+                </div>
+              </div><!-- end colapseTwo -->
+            </div><!-- end panel-default -->
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" id="panel-title-3" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Are you open for new projects?
+                  </a>
+                </h4>
+              </div><!-- end panel-heading -->
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                      “The starting point of all achievement is desire.”
+                      <br>At the moment I am open to start new projects.
+                      I would like to participate in interesting and challenging web projects that will give me an opportunity
+                      to grow and expand together with the client.
+                </div>
+              </div><!-- end colapseThree -->
+            </div><!-- end panel-default -->
+          </div><!-- end panel-group -->
+        </div><!-- end panel-wrappper -->
+        <!--<div class="only-mobile-2">
+          <p>Have you found the answer? Contact me.</p>
+        <span></span>
+      </div>-->
+  </section>
+
+  <section class="parallax parallax-3">
+    <div class="animated invisible">
+      <h1>Lets make your web tune</h1>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <div class="contact-wrapper">
+          <h2>Contact</h2>
+          <p>Lets make some great things toghether.
+            Send me an email or just submit your message and I will answer as soon as possible.</p>
+          <h3><span class="glyphicon glyphicon-glyphicon glyphicon-envelope"></span>bugarcic@gmail.com</h3>
+          <p>I am available for hiring. I want to help people build great products,
+          learn and grow together. I am open for interesting projects and remote work.</p>
+          <h3><span class="glyphicon glyphicon-glyphicon glyphicon glyphicon-phone"></span>Telephone</h3>
+          <p>+4915225935077</p>
+          <h3><span class="glyphicon glyphicon-glyphicon glyphicon glyphicon-map-marker"></span>Address</h3>
+          <p>Goyastr. 7, Berlin</p>
+        </div>
+      </div><!-- end col -->
+      <div class="col-md-6 col-xs-12">
+        <form>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Name" required="required">
+          </div>
+          <div class="form-group">
+            <label for="surname">Your Surname</label>
+            <input type="text" class="form-control" id="surname" placeholder="Surname" required="required">
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea class="form-control message-box" rows="3" minlength="10" maxlength="150" required="required"></textarea>
+            <p id="char-count"></p>
+            <p id="reaction"></p>
+          </div>
+          <button type="submit" class="btn btn-default" id="submitBtn">Submit</button>
+        </form>
+      </div>
+    </div><!-- end row -->
+    <div class="row map-wrapper" >
+      <div class="col-xs-12">
+        <div id="map">
+        <!--<iframe width=100% height="450" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ6flGB-9NqEcR0z7PGNZHOVY&key=AIzaSyBtef_OL_6eDHFOfuJkQSEiS8bJHpLfYDA" allowfullscreen>
+        </iframe>-->
+        </div>
+      </div>
+    </div>
+  </section><!-- end contact section -->
+
+
+</main> <!-- /container -->
+<footer>
+  <div class="tweetBtn">
+    <a href="https://twitter.com/twitter" class="twitter-follow-button" data-show-count="false">Follow @twitter</a>
+  </div><!-- end tweetBtn -->
+  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="50" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+  <p>&#169All rights reserved</p>
+</footer><!-- end footer -->

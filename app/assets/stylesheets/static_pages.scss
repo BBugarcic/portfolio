@@ -1,0 +1,969 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One|Monda:400,700|Philosopher:400,700|Days+One|Alegreya+Sans+SC:400,700|Rosario|Tenor+Sans);
+
+/*
+					INDEX PAGE
+==========================================================
+ html, body
+ =========================================================
+ */
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	position: relative;
+	padding-top: 75px;
+	padding-bottom: 180px;
+}
+
+* { box-sizing: border-box; }
+
+main {
+	overflow: hidden;
+}
+/*
+=========================================
+navigation
+=========================================
+*/
+
+.navbar {
+	min-height: 80px;
+	box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+	padding: 30px 30px;
+}
+
+.navbar-toggle {
+	margin-top: 22px;
+}
+
+.navbar-nav li {
+	margin: 0 10px;
+}
+
+.navbar-nav li a {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+  transition: 400ms;
+  font-size: 1.1em;
+}
+
+.navbar-nav li a:hover {
+	color: black !important;
+	/**/
+}
+
+@media (min-width: 768px) {
+	.navbar-nav li a {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	/*.navbar-nav li a:hover {
+		transform: scale(1.2, 1);
+	}*/
+}
+
+
+/*
+===================================================
+sections
+===================================================
+*/
+
+section {
+	margin-left: -30px;
+	margin-right: -30px;
+}
+
+.parallax {
+	position: relative;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: scroll; /* changed from fixed to scrool - fixed zoomed backround on Ipad an Iphone */
+	background-size: cover;
+}
+
+/* height mobile portrait */
+.parallax {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 300px;
+}
+
+/*mobile landscape*/
+@media only screen and (min-width: 321px) and (max-width: 767px) {
+	.parallax {
+		height: 250px;
+	}
+}
+
+/*tablet and deskot*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.parallax {
+		height: 500px;
+	}
+}
+
+/*large devices*/
+@media only screen and (min-width: 1200px) {
+	.parallax {
+		background-attachment: fixed;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.parallax {
+		height: 500px;
+	}
+}
+
+.parallax-0 {
+	position: relative;
+	background-image: url("https://res.cloudinary.com/dnkyfvpgn/image/upload/v1470431367/tower-go_jrifbe.jpg");
+	height: 100vh;
+	overflow: hidden;
+}
+
+.parallax-0 .home-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.parallax-1 {
+	background-image: url("https://res.cloudinary.com/dnkyfvpgn/image/upload/v1470431383/starway-go_g275zk.jpg");
+}
+
+.parallax-2 {
+	background-image: url("https://res.cloudinary.com/dnkyfvpgn/image/upload/v1470431376/stones-go_a1opxw.jpg");
+}
+
+.parallax-3 {
+	background-image: url("http://res.cloudinary.com/dnkyfvpgn/image/upload/v1470431391/piano1_wfhsyj.jpg");
+}
+
+/*
+===================================================
+about
+===================================================
+*/
+
+#about {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	overflow: hidden;
+	color: #6b6b6b;
+}
+
+@media only screen and (max-width : 420px)  {
+	#about {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.introduction {
+		background-color: #B5B5B5;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.introduction {
+		background-color: white;
+	}
+}
+
+.introduction,
+.skills {
+	padding: 50px 0px;
+	text-align: center;
+}
+.introduction p {
+	width: 80%;
+	margin: 0 auto;
+}
+.introduction a {
+	margin-top: 30px;
+}
+
+.skills {
+	font-size: 4em;
+}
+
+.skill-item {
+	margin: 10px;
+}
+
+/*
+=================================================
+work
+=================================================
+*/
+
+#work {
+	padding-top: 80px;
+	width: 80%;
+	margin: 0 auto;
+	overflow: hidden;
+	color: #6b6b6b;
+}
+
+.work-wrapper {
+	padding: 100px 0px;
+}
+
+.exercise-wrapper {
+	padding: 50px 0px;
+}
+
+/* projects */
+.project-item {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	text-align: left;
+	cursor: pointer; /*solved the touch transition on Ipad and Iphone*/
+}
+
+.project-item * {
+	-webkit-transition: all 0.45s ease;
+  	transition: all 0.45s ease;
+}
+
+.project-cover {
+	min-height: 300px;
+	min-width: 100%;
+	border: 1px solid;
+}
+
+.fa.fa-bullseye {
+	font-size: 5em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.item-caption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+/* handle hover over projects */
+.project-item:hover .project-cover, .project-item:focus .project-cover {
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.project-item:hover .item-caption, .project-item:focus .item-caption {
+	-webkit-transform: translateX(0%) !important;
+	-moz-transform: translateX(0%) !important;
+	-o-transform: translateX(0%) !important;
+	transform: translateX(0%) !important;
+}
+
+
+/*
+=================================================
+faq
+=================================================
+*/
+
+#faq {
+	position: relative;
+	height: 550px;/*1200px;*/
+	padding-top: 80px;
+	color: #6b6b6b;
+	text-align: center;
+}
+
+
+/*@media only screen and (min-width : 321px)  {
+	#faq {
+		height: 1100px;
+	}
+}
+@media only screen and (min-width : 360px)  {
+	#faq {
+		height: 1000px;
+	}
+}
+@media only screen and (min-width : 480px)  {
+	#faq {
+		height: 800px;
+	}
+}*/
+
+.panel-wrapper {
+	width: 60%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.panel-title a {
+	text-decoration: none;
+	color: inherit;
+	font-size: 1.2em;
+}
+
+.panel-title,
+.panel-body {
+	color: #6b6b6b;
+	text-align: left;
+}
+
+.panel-heading {
+	background-color: white !important;
+}
+
+
+/*
+===============================================
+contact
+===============================================
+*/
+
+#contact {
+	padding-top: 80px;
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+
+.contact-wrapper {
+	padding: 10px;
+	text-align: center;
+	background-color: #FFFFFF;
+	opacity: 0.7;
+	color: black;
+}
+
+.contact-wrapper .glyphicon.glyphicon-glyphicon.glyphicon-envelope,
+.contact-wrapper .glyphicon.glyphicon-glyphicon.glyphicon.glyphicon-phone,
+.contact-wrapper .glyphicon.glyphicon-glyphicon.glyphicon.glyphicon-map-marker {
+	margin-right: 10px;
+}
+
+form {
+	padding-top: 30px !important;
+}
+
+.form-group {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #6b6b6b;
+}
+
+form button {
+	margin-left: 10%;
+	color: #6b6b6b;
+}
+
+.map-wrapper {
+	margin-top: 20px;
+}
+
+#map {
+	width: 90%;
+	height: 300px;
+	margin: 0 auto !important;
+}
+
+/*
+===================================================
+animated
+===================================================
+*/
+
+.animated {
+	visibility: visible;
+}
+
+
+/*tablet, desktop, large desktop*/
+@media only screen and (min-width: 768px) {
+	.animated.invisible {
+		visibility: hidden;
+	}
+
+	.animated.visible {
+		visibility: visible;
+		animation: bounce-in 0.8s;
+	}
+
+	@keyframes bounce-in {
+		0% {
+			opacity: 0;
+			-webkit-transform: scale(0.5);
+			-moz-transform: scale(0.5);
+			-o-transform: scale(0.5);
+			transform: scale(0.5);
+		}
+
+		100% {
+			-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+			-o-transform: scale(1);
+			transform: scale(1);
+		}
+	}
+}
+
+/*
+======================================
+footer
+======================================
+*/
+footer {
+	height: 180px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #B5B5B5;
+	text-align: center;
+}
+
+footer .tweetBtn {
+	margin-top: 20px;
+}
+
+footer p {
+	margin-top: 30px;
+	padding: 0;
+}
+
+/*********************************
+==================================
+		TYPOGRAPHY
+==================================
+*+++++++++++++++++++++++++++++++++/
+/*
+==================================
+body
+==================================
+*/
+
+body {
+
+	font-family: 'Fjalla One', sans-serif;
+
+}
+
+/*
+==================================
+navigation
+==================================
+*/
+
+.navbar {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-weight: 700;
+}
+
+.navbar-brand {
+	font-size: 2em;
+}
+
+/*
+==================================
+divs with parallax effect
+==================================
+*/
+
+.parallax-0 .home-text {
+	text-align: center;
+}
+
+
+.parallax-0 .home-text h3 {
+	font-size: 1.5em;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+	letter-spacing: 0.05em;
+}
+
+.parallax-0 .home-text h5 {
+	font-size: 1em;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+	letter-spacing: 0.05em;
+}
+
+.parallax-1 h1,
+.parallax-2 h1,
+.parallax-3 h1 {
+	font-size: 1.5em;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+	letter-spacing: 0.05em;
+}
+
+/*mobile landscape*/
+@media only screen and (min-width : 321px)  {
+	.parallax-0 .home-text h3 {
+		font-size: 2em;
+		color: white;
+		text-shadow: 2px 2px 2px black;
+		letter-spacing: 0.05em;
+	}
+
+	.parallax-0 .home-text h5 {
+		font-size: 1.5em;
+		color: white;
+		text-shadow: 2px 2px 2px black;
+		letter-spacing: 0.05em;
+	}
+
+	.parallax-1 h1,
+	.parallax-2 h1,
+	.parallax-3 h1 {
+		font-size: 2.5em;
+	}
+
+
+}
+
+/*tablet portrait*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+	.parallax-0 .home-text h3 {
+		font-size: 2.8em;
+	}
+
+	.parallax-0 .home-text h5 {
+		font-size: 2em;
+	}
+
+	.parallax-1 h1,
+	.parallax-2 h1,
+	.parallax-3 h1 {
+		font-size: 2.8em;
+	}
+}
+
+/*tablet landscape, desktop, large screen*/
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+
+	.parallax-0 .home-text h3 {
+		font-size: 3em;
+	}
+
+	.parallax-0 .home-text h5 {
+		font-size: 2.5em;
+	}
+
+	.parallax-1 h1,
+	.parallax-2 h1,
+	.parallax-3 h1 {
+		font-size: 3em;
+		letter-spacing: 0.08em;
+	}
+}
+
+/*large devices*/
+@media only screen and (min-width: 1200px) {
+
+	.parallax-0 .home-text h3 {
+		font-size: 5em;
+	}
+
+	.parallax-0 .home-text h5 {
+		font-size: 3.5em;
+	}
+
+	.parallax-1 h1,
+	.parallax-2 h1,
+	.parallax-3 h1 {
+		font-size: 5em;
+		letter-spacing: 0.1em;
+	}
+}
+
+/*
+================================
+sections
+================================
+*/
+
+section h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/*
+=================================
+about
+=================================
+*/
+
+.introduction a {
+	color: #6b6b6b;
+}
+
+.introduction a.btn {
+	text-transform: uppercase;
+}
+
+.introduction p {
+	font-size: 1em !important;
+}
+
+@media only screen and (min-width : 321px)  {
+	.introduction p {
+		font-size: 1.2em !important;
+	}
+}
+
+/*
+==================================
+work projects
+==================================
+*/
+
+.project-item * {
+	text-align: center !important;
+	color: inherit;
+}
+
+.project-item h2 {
+	font-size: 1.2em;
+}
+
+.project-item h4 {
+	font-size: 0.8em;
+}
+
+.project-item h4 {
+	text-transform: uppercase;
+}
+
+.project-item p {
+	margin-top: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-top: 10px;
+	border-top: 1px solid white;
+}
+
+
+/*mobile landscape*/
+@media only screen and (min-width: 370px)  {
+	.project-item h2 {
+		font-size: 1.5em;
+	}
+
+	.project-item h4 {
+		font-size: 1em;
+	}
+
+	.project-item p {
+		margin-top: 10px;
+		margin-left: 30px;
+		margin-right: 30px;
+		padding-top: 20px;
+		border-top: 1px solid white;
+		line-height: 150%;
+		font-size: 0.8em;
+	}
+
+	.project-item a {
+		font-size: 0.8em;
+		padding-top: 10px;
+	}
+}
+
+@media only screen and (min-width: 450px)  {
+	.project-item h2 {
+		font-size: 2em;
+	}
+
+	.project-item h4 {
+		font-size: 1.5em;
+	}
+
+	.project-item p {
+		font-size: 1.2em;
+	}
+
+	.project-item a {
+		margin-top: 30px;
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (min-width: 590px)  {
+	.project-item h2 {
+		font-size: 2.5em;
+	}
+
+	.project-item h4 {
+		font-size: 2em;
+	}
+
+	.project-item p {
+		font-size: 1.5em;
+	}
+
+	.project-item a {
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 670px)  {
+	.project-item h2 {
+		line-height: 150%;
+	}
+
+	.project-item h4 {
+		line-height: 200%;
+	}
+
+	.project-item p {
+		font-size: 1.5em;
+		line-height: 200%;
+	}
+
+	.project-item a {
+		margin-top: 25px;
+	}
+}
+
+@media only screen and (min-width: 750px)  {
+	.project-item h2 {
+		line-height: 100%;
+	}
+
+	.project-item h4 {
+		line-height: 100%;
+	}
+
+	.project-item p {
+		font-size: 1.5em;
+	}
+
+	.project-item a {
+		margin-top: 50px;
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 850px)  {
+	.project-item a {
+		margin-top: 70px;
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 992px)  {
+
+	.project-item h2 {
+		font-size: 1.2em;
+	}
+
+	.project-item h4 {
+		font-size: 0.8em;
+		text-transform: uppercase;
+	}
+
+	.project-item p {
+		margin-top: 5px;
+		margin-left: 20px;
+		margin-right: 20px;
+		padding-top: 10px;
+		font-size: 1em;
+		line-height: 100%;
+	}
+
+	.project-item a {
+		margin-top: 0px;
+		font-size: 1em;
+	}
+}
+
+@media only screen and (min-width : 1024px)  {
+
+	.project-item h2 {
+		font-size: 1.2em;
+		line-height: 150%;
+	}
+
+	.project-item h4 {
+		font-size: 0.8em;
+		line-height: 150%;
+		text-transform: uppercase;
+	}
+
+	.project-item p {
+		line-height: 200%;
+	}
+
+}
+
+@media only screen and (min-width: 1200px)  {
+
+	.project-item h2 {
+		font-size: 2em;
+	}
+
+	.project-item h4 {
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 1300px)  {
+
+	.project-item p {
+		font-size: 1.1em;
+	}
+
+	.project-item a {
+		margin-top: 20px;
+	}
+}
+
+@media only screen and (min-width: 1500px)  {
+
+	.project-item p {
+		font-size: 1.5em;
+	}
+
+	.project-item a {
+		margin-top: 25px;
+		font-size: 1.5em;
+	}
+}
+
+/*
+==================================================
+faq
+==================================================
+*/
+
+#faq > h2 {
+	text-transform: uppercase;
+}
+
+.panel.panel-default .panel-body {
+	font-family: 'Philosopher', sans-serif;
+	font-size: 1em;
+}
+
+@media only screen and (min-width : 598px)  {
+	.panel.panel-default .panel-body {
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (min-width : 853px)  {
+	.panel.panel-default .panel-body {
+		font-size: 1.3em;
+	}
+}
+
+
+/*
+				ABOUT PAGE
+==================================================
+==================================================
+*/
+
+.close {
+	margin-right: 30px;
+	font-size: 2em;
+
+}
+
+.modal-title {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 2em;
+}
+
+#cv {
+	width: 100% !important;
+	height: 80vh;
+}
+
+img {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.atributes {
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 70px;
+	margin-bottom: 30px;
+	color:  rgb(170,80,50);
+}
+
+
+.story-wrapper {
+	position: relative;
+	padding-left: 30px;
+	margin-top: 30px;
+	border-top: 2px solid;
+	text-align: justify;
+	font-family: 'Philosopher', sans-serif;
+}
+
+.story-wrapper h2 {
+	margin-top: 50px;
+	font-family: 'Philosopher', sans-serif;
+}
+
+.story-wrapper p {
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.story-wrapper h3 {
+	margin-top: 50px;
+}
+
+.story-wrapper p {
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+@media only screen and (min-width: 992px)  {
+
+	.story-wrapper {
+		border-left: 2px solid;
+		border-top: none;
+	}
+
+	.story-wrapper h2 {
+		margin-top: 100px;
+	}
+
+	.story-wrapper p {
+		margin-top: 50px;
+		margin-bottom: 100px;
+		font-size: 1.5em;
+	}
+}
