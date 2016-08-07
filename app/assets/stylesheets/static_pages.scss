@@ -129,7 +129,8 @@ section {
 
 .parallax-0 {
 	position: relative;
-	background-image: url("https://res.cloudinary.com/dnkyfvpgn/image/upload/v1470431367/tower-go_jrifbe.jpg");
+  background-image: url("toranj-go.jpg");
+	/*background-image: url("https://res.cloudinary.com/dnkyfvpgn/image/upload/v1470431367/tower-go_jrifbe.jpg");*/
 	height: 100vh;
 	overflow: hidden;
 }
@@ -151,6 +152,17 @@ section {
 
 .parallax-3 {
 	background-image: url("http://res.cloudinary.com/dnkyfvpgn/image/upload/v1470431391/piano1_wfhsyj.jpg");
+}
+
+/*
+===================================================
+home
+===================================================
+*/
+@media only screen and (min-width : 429px) {
+  .home-text>h5 {
+    text-align: right;
+  }
 }
 
 /*
@@ -203,6 +215,9 @@ about
 	margin: 10px;
 }
 
+.me {
+  border-radius: 5px;
+}
 /*
 =================================================
 work
@@ -914,13 +929,14 @@ img {
 }
 
 .atributes {
-	text-align: center;
+	text-align: left;
 	text-transform: uppercase;
-	margin-top: 70px;
-	margin-bottom: 30px;
 	color:  rgb(170,80,50);
 }
 
+.atribut {
+  height: 50%;
+}
 
 .story-wrapper {
 	position: relative;
@@ -929,6 +945,7 @@ img {
 	border-top: 2px solid;
 	text-align: justify;
 	font-family: 'Philosopher', sans-serif;
+  font-size: 1em;
 }
 
 .story-wrapper h2 {
@@ -950,6 +967,19 @@ img {
 	margin-bottom: 100px;
 }
 
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.is-flex >[class*='col-'].tablet-mob-hidden {
+  display: none;
+}
+
 @media only screen and (min-width: 992px)  {
 
 	.story-wrapper {
@@ -966,4 +996,9 @@ img {
 		margin-bottom: 100px;
 		font-size: 1.5em;
 	}
+
+  .is-flex >[class*='col-'].tablet-mob-hidden {
+    display: flex;
+  }
+
 }
