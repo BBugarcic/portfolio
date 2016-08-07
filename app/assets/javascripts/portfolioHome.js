@@ -31,72 +31,14 @@
       function(){}
     );
   };
-	/*var styles = [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}];*/
-
-
-	/*var myAdress = {lat: 52.5520332, lng: 13.439426};
-
-	map = new google.maps.Map(document.getElementById('map'), {
-		center: myAdress,
-		zoom: 9
-	});
-
-	map.setOptions({styles: styles});
-
-	var marker = new google.maps.Marker({
-		position: myAdress,
-		map: map,
-		title: 'Hello World!'
-	});*/
-
-
-var worksObj = [
-  {
-    workTitle: "Tribute Page",
-    languages: "html5 css3",
-    description: "Tribute page deducated to Nikola Tesla's work and life",
-    url: "http://bbugarcic.github.io/tributePage/"
-  },
-  {
-    workTitle: "Pomodoro Clock",
-    languages: "html5 css3 JS jQuery",
-    description: "Timer based on Pomodoro time managment model.",
-    url: "http://bbugarcic.github.io/pomodoroClock/"
-  },
-  {
-    workTitle: "Calculator",
-    languages: "html5 css3 js jQuery",
-    description: "Cool retro Calculator",
-    url: "http://bbugarcic.github.io/JScalculator/"
-  }
-];
 
 $(document).on("ready page:change", function(){
 
   //google maps API
   initMap();
 
-  for(i = 0; i < worksObj.length; i++) {
-    $(".work-wrapper").append("\
-      <div class='col-md-4 col-xs-12'>\
-        <figure class='project-item'>\
-          <div class='project-cover'>\
-            <h2>" + worksObj[i].workTitle + "</h2>\
-            <i class='fa fa-bullseye' id='" + i + "'aria-hidden='true'></i>\
-          </div><!-- end project-cover -->\
-          <figcaption class='item-caption'>\
-            <h2>" + worksObj[i].workTitle + "</h2>\
-                      <h4>" + worksObj[i].languages + "</h4>\
-                      <p>" + worksObj[i].description + "</p>\
-                      <div>\
-                        <a class='btn btn-default' href='" + worksObj[i].url + "' target='_blank'>Open page</a>\
-                    </div>\
-                  </figcaption><!-- end figcaption -->\
-              </figure><!-- end figure -->\
-            </div><!-- end col class -->\
-    ");
-  }
-
+  //load work
+  loadWork(worksObj);
 
   $(window).stellar({ horizontalScrolling: false });
   //$.initialize();

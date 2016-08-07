@@ -219,23 +219,29 @@
         </div>
       </div><!-- end col -->
       <div class="col-md-6 col-xs-12">
-        <form>
+        <%= form_tag("static_pages/thank_you") do %>
           <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Name" required="required">
+            <%= label_tag :name %>
+            <%= text_field_tag :name, nil, class: "form-control", placeholder: "Your Name", :required => true %>
           </div>
           <div class="form-group">
-            <label for="surname">Your Surname</label>
-            <input type="text" class="form-control" id="surname" placeholder="Surname" required="required">
+            <%= label_tag :surname %>
+            <%= text_field_tag :surname, nil, class: "form-control", placeholder: "Your Surname", :required => true %>
           </div>
           <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea class="form-control message-box" rows="3" minlength="10" maxlength="150" required="required"></textarea>
-            <p id="char-count"></p>
+            <%= label_tag :email %>
+            <%= text_field_tag :email, nil, class: "form-control", type:"email", placeholder: "Your Email", :required => true %>
+          </div>
+          <div class="form-group">
+            <%= label_tag :message %>
+            <%= text_area_tag :message, nil, class: "form-control", placeholder: "Your Message", :rows => 3,  :required => true %>
+            <%= flash[:notice] %>
             <p id="reaction"></p>
           </div>
-          <button type="submit" class="btn btn-default" id="submitBtn">Submit</button>
-        </form>
+          <div class="form-group">
+            <%= submit_tag "Send", class: "btn btn-default" %>
+          </div>
+        <% end %>
       </div>
     </div><!-- end row -->
     <div class="row map-wrapper" >
