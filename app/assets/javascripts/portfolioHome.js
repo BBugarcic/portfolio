@@ -121,7 +121,7 @@ $(document).on("ready page:change", function(){
 	});
 
 	// submit
-	$("#submitBtn").on("click", function() {
+	/*$("#submitBtn").on("click", function() {
 		// get input
 		var name = $("#name").val();
 		var surname = $("#surname").val();
@@ -136,6 +136,6 @@ $(document).on("ready page:change", function(){
 			$("#reaction").html("Your message is sent. I will get back to you as soon as possible.");
 		}
 
-	});
+	});*/
 
 });

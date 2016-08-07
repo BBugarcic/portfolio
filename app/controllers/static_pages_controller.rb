@@ -11,5 +11,7 @@ class StaticPagesController < ApplicationController
     :to => '2bjswebdev@gmail.com',
     :subject => "A new contact form message from #{@name} #{@surname}",
     :body => @message).deliver_now
+
+    redirect_to root_path
   end
 end
