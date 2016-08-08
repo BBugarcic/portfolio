@@ -51,28 +51,6 @@ $(document).on("ready page:change", function(){
 
 		var $navLink = $(this);
 		var $id = $navLink.attr("href");
-    //console.log("path: " + $path);
-/*    var $id;
-    var idIndex;
-
-    /*if(idIndex = $path.indexOf("#") !== -1) {
-      console.log("idIndex home: " + idIndex);
-      $id = $path.substring(idIndex - 1);
-    } /*else if (idIndex = $path.indexOf("#") !== -1) {
-      console.log("idIndex about: " + idIndex);
-      $id = $path.substring(idIndex);
-    } else if ((idIndex = $path.indexOf("#work") !== -1)) {
-      console.log("idIndex work: " + idIndex);
-      $id = $path.substring(idIndex);
-    } else if ((idIndex = $path.indexOf("#faq") !== -1)) {
-      console.log("idIndex faq: " + idIndex);
-      $id = $path.substring(idIndex);
-    } else if ((idIndex = $path.indexOf("#contact") !== -1)) {
-      console.log("idIndex contact: " + idIndex);
-      $id = $path.substring(idIndex);
-    }*/
-
-    console.log("id je sada: " + $id);
 
 		$root.animate({
 			scrollTop: $($id).offset().top
