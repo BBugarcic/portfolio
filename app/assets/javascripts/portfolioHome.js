@@ -3,21 +3,14 @@
     {js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
 
-// facebook button in the footer of the index page
-//function(d, s, id) {
-//	var js, fjs = d.getElementsByTagName(s)[0];
-//    if (d.getElementById(id)) return;
-//    js = d.createElement(s); js.id = id;
-//    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-//    fjs.parentNode.insertBefore(js, fjs);
-//}(document, 'script', 'facebook-jssdk'));
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+  // facebook button in the footer of the index page
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 
   //google maps API
   var map;
@@ -126,22 +119,5 @@ $(document).on("ready page:change", function(){
 		$(".message-box").css("background-color", "#dddddd");
 	});
 
-	// submit
-	/*$("#submitBtn").on("click", function() {
-		// get input
-		var name = $("#name").val();
-		var surname = $("#surname").val();
-		var comment = $(".message-box").val();
-
-		if(comment === "") {
-			$(".message-box").css("border", "solid").css("border-size", "3px").css("border-color", "red");
-		} else {
-			// populate the DOM elements
-			$("#name, #surname, .message-box").val("");
-			$("#char-count").html("");
-			$("#reaction").html("Your message is sent. I will get back to you as soon as possible.");
-		}
-
-	});*/
 
 });
