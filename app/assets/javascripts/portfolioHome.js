@@ -90,16 +90,13 @@ $(document).on("ready page:change", function(){
 	// faq section
 	function changeHeightFaq(id) {
 		var selector = "#" + id;
-		console.log(selector);
-		if($(selector).hasClass("expanded-faq-height open-panel-body")) {
-			console.log("if");
+    if($(selector).hasClass("panel-title")) {
+    } else if ($(selector).hasClass("expanded-faq-height open-panel-body")) {
 			$(selector).removeClass("expanded-faq-height open-panel-body");
 			$("#faq").animate({
 				"height": "600px"
 			}, 500);
-
 		} else {
-			console.log("else");
 			$("#faq").find(".expanded-faq-height").removeClass("expanded-faq-height open-panel-body");
 			$(selector).addClass("expanded-faq-height open-panel-body");
 			$("#faq").animate({
