@@ -921,6 +921,11 @@ faq
 	height: 80vh;
 }
 
+.img-row {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 img {
 	margin-top: 10px;
 	margin-left: auto;
@@ -930,7 +935,7 @@ img {
 .atributes {
 	text-align: left;
 	text-transform: uppercase;
-	color:  rgb(170,80,50);
+	color: rgb(170,80,50);
 }
 
 .atribut {
@@ -940,11 +945,13 @@ img {
 .story-wrapper {
 	position: relative;
 	padding-left: 30px;
-	margin-top: 30px;
-	border-top: 2px solid;
+  padding-right: 30px;
+  margin-top: 20px;
+	border-top: 0.5px solid #B5B5B5;
 	text-align: justify;
 	font-family: 'Philosopher', sans-serif;
   font-size: 1em;
+  color: #777;
 }
 
 .story-wrapper h2 {
@@ -982,7 +989,7 @@ img {
 @media only screen and (min-width: 992px)  {
 
 	.story-wrapper {
-		border-left: 2px solid;
+		border-left: 0.5px solid #B5B5B5;
 		border-top: none;
 	}
 
@@ -999,5 +1006,33 @@ img {
   .is-flex >[class*='col-'].tablet-mob-hidden {
     display: flex;
   }
+}
 
+.social-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.social-icon {
+  height: 50px;
+  width: 50px;
+  border: solid 1px;
+  border-radius: 50%;
+  padding: 0;
+  position: relative;
+}
+
+.fa.fa-linkedin,
+.fa.fa-github,
+.cv {
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a.social-icon {
+  color: #B5B5B5;
 }

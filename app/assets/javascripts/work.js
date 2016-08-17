@@ -13,10 +13,10 @@ var worksObj = [
     url: "http://bbugarcic.github.io/pomodoroClock/"
   },
   {
-    workTitle: "Calculator",
-    languages: "html5 css3 js jQuery",
-    description: "Cool retro Calculator",
-    url: "http://bbugarcic.github.io/JScalculator/"
+    workTitle: "Bike Berlin",
+    languages: "Ruby on Rails",
+    description: "E-commerce Demo App",
+    url: "https://warm-journey-96233.herokuapp.com/"
   }
 ];
 
