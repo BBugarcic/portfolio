@@ -10,4 +10,4 @@ Ruby On Rails 4.2.6
 Ruby 2.3.1
 
 #### Deployed on Heroku
-Live version of my portfolio you can find [here](https://branislav-bugarcic.herokuapp.com)
+Live version deployed on Heroku is [here](https://branislav-bugarcic.herokuapp.com).
