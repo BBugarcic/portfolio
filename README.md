@@ -8,3 +8,6 @@ This is the place where I'll show my resent work and my progress in developing n
 #### Ruby On Rails and Ruby version
 Ruby On Rails 4.2.6
 Ruby 2.3.1
+
+#### Deployed on Heroku
+Live version of my portfolio you can find [here](https://branislav-bugarcic.herokuapp.com)
